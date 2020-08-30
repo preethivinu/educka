@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: my-pvc1
+  name: nfs
 spec:
-  storageClassName: standard
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
+  storageClassName: ""
   resources:
     requests:
-      storage: 20000Mi
+      storage: 1Mi
